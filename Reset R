@@ -1,0 +1,20 @@
+  Callback = function() 
+
+    local UserInputService = game:GetService("UserInputService")
+local Players = game:GetService("Players")
+
+local rKey = Enum.KeyCode.R
+
+local function Input(input, gameProcessedEvent)
+	
+	if UserInputService:IsKeyDown(rKey) then
+		
+		local Humanoid = Players.LocalPlayer.Character.Humanoid
+		
+		Humanoid.Health = 0
+		
+	end
+	
+end
+
+UserInputService.InputBegan:Connect(Input)
